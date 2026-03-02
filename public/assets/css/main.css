@@ -254,6 +254,12 @@ h6 {
   color: #0f5787;
 }
 
+@media (max-width: 1199px) {
+  .header .logo-text {
+    display: none !important;
+  }
+}
+
 .header .brand-name {
   font-size: 26px;
   font-weight: 700;
@@ -476,12 +482,12 @@ h6 {
     display: none;
     list-style: none;
     position: absolute;
-    inset: 60px 20px 20px 20px;
+    inset: 100px 20px 20px 20px;
     padding: 10px 0;
     margin: 0;
     border-radius: 6px;
-    background-color: var(--nav-mobile-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    background-color: transparent;
+    border: none;
     box-shadow: none;
     overflow-y: auto;
     transition: 0.3s;
@@ -490,16 +496,18 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-dropdown-color);
-    padding: 10px 20px;
+    color: #ffffff;
+    padding: 15px 20px;
     font-family: var(--nav-font);
-    font-size: 17px;
-    font-weight: 500;
+    font-size: 24px;
+    font-weight: 600;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     white-space: nowrap;
     transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 
   .navmenu a i,
@@ -573,12 +581,18 @@ h6 {
     position: fixed;
     overflow: hidden;
     inset: 0;
-    background: rgba(33, 37, 41, 0.8);
+    background: rgba(0, 9, 16, 0.95);
     transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .mobile-nav-active .navmenu > ul {
     display: block;
+    position: static;
+    text-align: center;
+    width: 100%;
   }
 }
 
@@ -1882,6 +1896,67 @@ section,
 
 .service-details p {
   font-size: 15px;
+}
+
+/*--------------------------------------------------------------
+# GLightbox - DISEÑO FINAL ETIQUETA SOBRE IMAGEN
+--------------------------------------------------------------*/
+/* Matamos el sidebar lateral en Desktop */
+.ginner-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.gslide-inner-content {
+  display: flex !important;
+  flex-direction: column !important;
+  background: transparent !important;
+  width: auto !important;
+  max-width: 100% !important;
+  position: relative !important;
+}
+
+/* La etiqueta ahora flota sobre la imagen */
+.gslide-description {
+  position: absolute !important;
+  bottom: 20px !important;
+  left: 30% !important; /* Lo movemos hacia adentro para que caiga sobre la foto */
+  background: rgba(0, 9, 16, 0.9) !important;
+  padding: 8px 16px !important;
+  border-left: 3px solid var(--accent-color) !important;
+  border-radius: 0 4px 4px 0 !important;
+  width: auto !important;
+  max-width: fit-content !important;
+  z-index: 9999 !important;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5) !important;
+}
+
+.gslide-title {
+  font-family: var(--heading-font) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  text-transform: uppercase !important;
+  margin: 0 !important;
+  letter-spacing: 1px;
+}
+
+/* Escondemos lo innecesario */
+.gslide-desc {
+  display: none !important;
+}
+
+@media (max-width: 992px) {
+  .gslide-description {
+    bottom: 20px !important;
+    left: 20px !important;
+    padding: 6px 12px !important;
+  }
 }
 
 .service-details ul {
