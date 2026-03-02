@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Stats from "../components/Stats.astro";
+import Services from "../components/Services.astro";
+import Clients from "../components/Clients.astro";
+import Services2 from "../components/Services2.astro";
+import Testimonials from "../components/Testimonials.astro";
+import Portfolio from "../components/Portfolio.astro";
+import Team from "../components/Team.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Iris - Desarrollo Web y Soluciones Digitales"
+  description="Expertos en desarrollo de software, diseño web y transformación digital."
+>
+  <Header slot="header" />
+
+  <main class="main">
+    <Hero />
+    <Clients />
+    <About />
+    <Stats />
+    <Services />
+    <Services2 />
+    <Testimonials />
+    <Portfolio />
+    <Team />
+    <Contact />
+  </main>
+
+  <Footer slot="footer" />
+</Layout>

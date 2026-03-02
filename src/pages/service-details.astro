@@ -1,0 +1,104 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Detalles del Servicio - Soluciones iRiS"
+  description="Explora nuestras soluciones especializadas en desarrollo de software, automatización con n8n, inteligencia artificial y marketing digital."
+>
+  <Header slot="header" />
+
+  <main class="main">
+    <!-- Page Title -->
+    <div
+      class="page-title dark-background"
+      data-aos="fade"
+      style="background-image: url(/assets/img/page-title-bg.webp);"
+    >
+      <div class="container position-relative">
+        <h1>Detalles del Servicio</h1>
+        <p>
+          Brindamos arquitectura técnica de alto nivel para solucionar los
+          problemas más complejos de tu industria.
+        </p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="/">Inicio</a></li>
+            <li class="current">Detalles del Servicio</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Service Details Section -->
+    <section id="service-details" class="service-details section">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="services-list">
+              <a href="#" class="active">Automatización de Procesos</a>
+              <a href="#">Sistemas & Web a Medida</a>
+              <a href="#">Agentes de IA & Chatbots</a>
+              <a href="#">Gestión de Almacenes (WMS)</a>
+              <a href="#">Marketing Digital</a>
+            </div>
+
+            <h4>Liderando la vanguardia tecnológica</h4>
+            <p>
+              En iRiS, no solo implementamos tecnología; diseñamos el futuro de
+              tu operatividad. Nos enfocamos en la eficiencia, escalabilidad y
+              seguridad en cada solución que entregamos.
+            </p>
+          </div>
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+            <img
+              src="/assets/img/services.jpg"
+              alt="Servicios de Ingeniería de Software iRiS"
+              class="img-fluid services-img"
+            />
+            <h3>Optimiza tu negocio con ingeniería de alto rendimiento</h3>
+            <p>
+              Nuestras soluciones están diseñadas para integrarse perfectamente
+              en tu ecosistema empresarial actual, eliminando fricciones y
+              potenciando el crecimiento a través de la innovación digital.
+            </p>
+            <ul>
+              <li>
+                <i class="bi bi-check-circle"></i>
+                <span>Conectividad total entre plataformas con n8n y Make.</span
+                >
+              </li>
+              <li>
+                <i class="bi bi-check-circle"></i>
+                <span>Desarrollo de software con arquitecturas escalables.</span
+                >
+              </li>
+              <li>
+                <i class="bi bi-check-circle"></i>
+                <span>Soporte técnico especializado y evolución continua.</span>
+              </li>
+            </ul>
+            <p>
+              Entendemos que cada empresa es única. Por ello, nuestras
+              consultorías se basan en un análisis exhaustivo de tus procesos
+              para ofrecerte una hoja de ruta tecnológica que garantice el éxito
+              a largo plazo.
+            </p>
+            <p>
+              Desde la automatización de tareas repetitivas hasta la creación de
+              agentes de inteligencia artificial personalizados, nuestro equipo
+              de ingenieros trabaja codo a codo contigo para asegurar que cada
+              inversión tecnológica se traduzca en una ventaja competitiva real
+              en el mercado.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Service Details Section -->
+  </main>
+
+  <Footer slot="footer" />
+</Layout>

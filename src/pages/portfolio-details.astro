@@ -1,0 +1,122 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Detalles del Proyecto - Innovación iRiS"
+  description="Conoce a fondo los proyectos y soluciones tecnológicas que hemos implementado para transformar negocios digitales."
+>
+  <Header slot="header" />
+
+  <main class="main">
+    <!-- Page Title -->
+    <div
+      class="page-title dark-background"
+      data-aos="fade"
+      style="background-image: url(/assets/img/page-title-bg.webp);"
+    >
+      <div class="container position-relative">
+        <h1>Detalles del Proyecto</h1>
+        <p>
+          Analizamos a profundidad cada solución tecnológica para garantizar el
+          máximo impacto en tu negocio.
+        </p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="/">Inicio</a></li>
+            <li class="current">Detalles del Proyecto</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper init-swiper">
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide">
+                  <img
+                    src="/assets/img/portfolio/app-1.png"
+                    alt="Detalle de Desarrollo App iRiS"
+                  />
+                </div>
+
+                <div class="swiper-slide">
+                  <img
+                    src="/assets/img/portfolio/product-1.png"
+                    alt="Detalle de Sistema iRiS"
+                  />
+                </div>
+
+                <div class="swiper-slide">
+                  <img
+                    src="/assets/img/portfolio/branding-1.png"
+                    alt="Detalle de Estrategia iRiS"
+                  />
+                </div>
+
+                <div class="swiper-slide">
+                  <img
+                    src="/assets/img/portfolio/books-1.png"
+                    alt="Detalle de Logística iRiS"
+                  />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>Información del proyecto</h3>
+              <ul>
+                <li><strong>Categoría</strong>: Desarrollo Web</li>
+                <li><strong>Cliente</strong>: Cliente IRIS</li>
+                <li><strong>Fecha</strong>: 01 de Marzo, 2026</li>
+                <li>
+                  <strong>URL</strong>: <a href="#">www.iris.com.pe</a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="portfolio-description"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <h2>Soluciones con impacto tecnológico real</h2>
+              <p>
+                Cada proyecto en iRiS es una oportunidad para redefinir los
+                límites de lo posible. Implementamos arquitecturas robustas y
+                escalables que permiten a nuestros clientes liderar sus
+                respectivos mercados con tecnología de vanguardia.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Portfolio Details Section -->
+  </main>
+
+  <Footer slot="footer" />
+</Layout>
